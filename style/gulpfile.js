@@ -55,4 +55,4 @@ gulp.task('build', function() {
     gulp.start('sass', 'js');
 });
 
-gulp.task('default', ['sass', 'js', 'watch']);
+gulp.task('default', ['sass', 'js', 'watch', 'build']);
