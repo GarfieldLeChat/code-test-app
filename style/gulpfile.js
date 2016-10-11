@@ -12,14 +12,14 @@ var jsSources = ['js/main.js'],
     jsDirectory = ['js/**/*.js'],
     jsDirectoryMods = ['js/modules/*.js'],
     sassSources = ['sass/*.scss'],
-    cssOutputDir = 'css',
+    cssOutputDir = 'css/',
     outputDir = 'js/global.js';
 
 gulp.task('sass', function() {
   gulp.src(sassSources)
   .pipe(sass({global: 'compressed', outputStyle: 'compressed'}))
     .on('error', gutil.log)
-  .pipe(gulp.dest('css'))
+  .pipe(gulp.dest('css/'))
   .pipe(connect.reload());
 });
 
@@ -55,4 +55,4 @@ gulp.task('build', function() {
     gulp.start('sass', 'js');
 });
 
-gulp.task('default', ['sass', 'js', 'connect', 'watch']);
+gulp.task('default', ['sass', 'js', 'watch']);
