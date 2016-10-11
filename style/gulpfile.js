@@ -4,22 +4,22 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
     rename = require('gulp-rename'),
-	uglify = require('gulp-uglify'),
-	gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    gulpif = require('gulp-if'),
     args   = require('yargs').argv;
 
 var jsSources = ['js/main.js'],
     jsDirectory = ['js/**/*.js'],
-	jsDirectoryMods = ['js/modules/*.js'],
+    jsDirectoryMods = ['js/modules/*.js'],
     sassSources = ['sass/*.scss'],
-    cssOutputDir = 'css/',
+    cssOutputDir = 'css',
     outputDir = 'js/global.js';
 
 gulp.task('sass', function() {
   gulp.src(sassSources)
   .pipe(sass({global: 'compressed', outputStyle: 'compressed'}))
     .on('error', gutil.log)
-  .pipe(gulp.dest('css/'))
+  .pipe(gulp.dest('css'))
   .pipe(connect.reload());
 });
 

@@ -7,15 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "E Strickland",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
-    }
-  ],
+  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.2.0",
     "gulp-if": "^2.0.1",
